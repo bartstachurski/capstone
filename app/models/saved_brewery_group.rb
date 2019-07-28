@@ -1,0 +1,2 @@
+class SavedBreweryGroup < ApplicationRecord
+end

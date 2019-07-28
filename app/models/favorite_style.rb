@@ -1,0 +1,2 @@
+class FavoriteStyle < ApplicationRecord
+end

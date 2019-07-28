@@ -1,0 +1,2 @@
+class SharedGroup < ApplicationRecord
+end

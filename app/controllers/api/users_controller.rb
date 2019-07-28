@@ -1,6 +1,4 @@
 class Api::UsersController < ApplicationController
-  has_secure_password
-  validates :email, presence: true, uniqueness: true
 
   def create
     user = User.new(
