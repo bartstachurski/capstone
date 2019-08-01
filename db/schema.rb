@@ -50,7 +50,7 @@ ActiveRecord::Schema.define(version: 2019_07_28_195416) do
     t.integer "saved_brewery_id"
     t.integer "group_id"
     t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, nullSaSaved_Brew: false
   end
 
   create_table "shared_groups", force: :cascade do |t|
