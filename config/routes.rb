@@ -8,5 +8,6 @@ Rails.application.routes.draw do
     post '/users' => 'users#create'
     post '/sessions' => 'sessions#create'
     post '/friendships' => 'friendships#create'
+    get '/saved_breweries' => 'saved_breweries#index'
   end
 end

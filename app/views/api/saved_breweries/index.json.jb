@@ -1,0 +1,4 @@
+{
+  message: "hello from the api index view file!",
+  breweries: @breweries
+}
