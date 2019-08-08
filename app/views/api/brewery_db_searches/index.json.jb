@@ -1,4 +1,6 @@
-{
-  message: "hello from the api index view file!",
-  breweries: @breweries
-}
+@breweries.map do |brewery|
+  {
+    message: "hello from the api index view file!",
+    name: brewery["brewery"]["name"]
+  }
+end
