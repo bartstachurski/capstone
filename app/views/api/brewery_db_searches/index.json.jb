@@ -1,6 +1,10 @@
 @breweries.map do |brewery|
   {
-    message: "hello from the api index view file!",
-    name: brewery["brewery"]["name"]
+    location_name: brewery["name"],
+    brewery_name: brewery["brewery"]["name"]
   }
 end
+# {
+#   brewery_location_name: @breweries[0]["name"],
+#   brewery_name: @breweries[0]["brewery"]["name"]
+# }
