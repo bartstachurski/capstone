@@ -12,4 +12,10 @@ class Api::BreweryDbSearchesController < ApplicationController
     @breweries = response.parse["data"]
     render 'index.json.jb'
   end
+
+  def show
+    response = HTTP.get("https://api.brewerydb.com/v2/location/jDCID3", :params => {key: ENV["BREWERY_DB_KEY_PRODUCTION"]})
+    @brewery = response.parse["data"]
+    render 'show.json.jb'
+  end
 end

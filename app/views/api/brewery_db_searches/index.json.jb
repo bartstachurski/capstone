@@ -1,5 +1,6 @@
 @breweries.map do |brewery|
   {
+    id: brewery["id"],
     location_name: brewery["name"],
     brewery_name: brewery["brewery"]["name"]
   }

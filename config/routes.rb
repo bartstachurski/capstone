@@ -10,5 +10,6 @@ Rails.application.routes.draw do
     post '/friendships' => 'friendships#create'
     get '/saved_breweries' => 'saved_breweries#index'
     get '/brewery_db_searches' => 'brewery_db_searches#index'
+    get '/brewery_db_searches/:id' => 'brewery_db_searches#show'
   end
 end

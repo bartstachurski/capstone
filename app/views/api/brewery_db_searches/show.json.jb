@@ -1,0 +1,6 @@
+{
+  all_data: @brewery,
+  brewery: @brewery["brewery"]["name"],
+  location: @brewery["name"],
+  id: @brewery["id"]
+}
