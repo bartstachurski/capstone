@@ -1,6 +1,8 @@
 {
   all_data: @brewery,
-  brewery: @brewery["brewery"]["name"],
-  location: @brewery["name"],
-  id: @brewery["id"]
+  brewery_name: @brewery["brewery"]["name"],
+  location_name: @brewery["name"],
+  id: @brewery["id"],
+  hours_of_operation: @brewery["hoursOfOperationNotes"],
+  website: @brewery["website"]
 }
