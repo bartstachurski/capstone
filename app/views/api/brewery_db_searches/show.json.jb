@@ -1,6 +1,6 @@
 {
-  untappd_name: @untappd_name,
-  untappd_response: @untappd_response,
+  untappd_brewery_id: @untappd_brewery_id,
+  untappd_brewery_info: @untappd_brewery_info,
   all_data: @brewery,
   brewery_name: @brewery["brewery"]["name"],
   location_name: @brewery["name"],

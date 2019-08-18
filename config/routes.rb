@@ -12,5 +12,7 @@ Rails.application.routes.draw do
     post '/saved_breweries' => 'saved_breweries#create'
     get '/brewery_db_searches' => 'brewery_db_searches#index'
     get '/brewery_db_searches/:id' => 'brewery_db_searches#show'
+    get '/untappd_venues' => 'untappd_venues#index'
+    get '/untappd_venues/:id' => 'untappd_venues#show'
   end
 end

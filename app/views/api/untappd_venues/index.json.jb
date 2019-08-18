@@ -1,0 +1,13 @@
+@venues.map do |venue|
+  {
+    venue_id: venue["venue"]["venue_id"],
+    venue_name: venue["venue"]["venue_name"],
+    categories: venue["venue"]["categories"]["items"],
+    location: venue["venue"]["location"],
+    venue_address: venue["venue"]["venue_address"],
+    venue_city: venue["venue"]["venue_city"],
+    venue_state: venue["venue"]["venue_state"],
+    venue_country: venue["venue"]["venue_country"],
+    venue_icon: venue["venue"]["venue_icon"]
+  }
+end

@@ -1,0 +1,12 @@
+{
+  # brewery_id has a problem if a venue has multiple breweries...
+  brewery_id: @sorted_brewery_locations[0]["brewery_id"],
+  venue_id: @untappd_venue_info["venue_id"],
+  venue_name: @untappd_venue_info["venue_name"],
+  brewery_name: @sorted_brewery_locations[0]["brewery_name"],
+  venue_address: @untappd_venue_info["location"]["venue_address"],
+  venue_city: @untappd_venue_info["location"]["venue_city"],
+  venue_state: @untappd_venue_info["location"]["venue_state"],
+  venue_country: @untappd_venue_info["location"]["venue_country"]
+  # venue_info: @untappd_venue_info
+}
