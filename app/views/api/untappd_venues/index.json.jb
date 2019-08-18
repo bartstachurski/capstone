@@ -2,7 +2,7 @@
   {
     venue_id: venue["venue"]["venue_id"],
     venue_name: venue["venue"]["venue_name"],
-    categories: venue["venue"]["categories"]["items"],
+    categories: venue["venue"]["categories"]["items"].map{|category| category["category_name"]},
     location: venue["venue"]["location"],
     venue_address: venue["venue"]["venue_address"],
     venue_city: venue["venue"]["venue_city"],

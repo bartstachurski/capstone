@@ -7,6 +7,6 @@
   venue_address: @untappd_venue_info["location"]["venue_address"],
   venue_city: @untappd_venue_info["location"]["venue_city"],
   venue_state: @untappd_venue_info["location"]["venue_state"],
-  venue_country: @untappd_venue_info["location"]["venue_country"]
-  # venue_info: @untappd_venue_info
+  venue_country: @untappd_venue_info["location"]["venue_country"],
+  venue_info: @untappd_venue_info
 }
