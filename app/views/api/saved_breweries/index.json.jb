@@ -1,0 +1,10 @@
+@saved_breweries.map do |saved_brewery|
+  {
+    brewery_name: saved_brewery["brewery_name"],
+    venue_name: saved_brewery["venue_name"],
+    visited: saved_brewery["visited"],
+    rating: saved_brewery["rating"],
+    comment: saved_brewery["comment"],
+    brewery_id: saved_brewery["brewery_id"],
+  }
+end

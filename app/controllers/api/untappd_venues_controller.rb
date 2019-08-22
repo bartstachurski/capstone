@@ -2,7 +2,7 @@ class Api::UntappdVenuesController < ApplicationController
   def index
     venues = HTTP.get("https://api.untappd.com/v4/search/venue?client_id=#{ENV["UNTAPPD_CLIENT_ID"]}&client_secret=#{ENV["UNTAPPD_CLIENT_SECRET"]}&q=#{params[:city]}")
     # @venues = venues.parse["response"]["venues"]["items"]
-    @venues = venues.parse["response"]["venues"]["items"]
+    @venues = venues.parse["response"]["venues"]
     render 'index.json.jb'
   end
 

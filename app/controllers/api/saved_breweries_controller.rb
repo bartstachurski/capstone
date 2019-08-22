@@ -5,9 +5,16 @@ class Api::SavedBreweriesController < ApplicationController
       brewery_id: params[:brewery_id],
       visited: params[:visited],
       rating: params[:rating],
-      comment: params[:comment]
+      comment: params[:comment],
+      brewery_name: params[:brewery_name],
+      venue_name: params[:venue_name]
       )
     saved_brewery.save
     render 'show.json.jb'
+  end
+
+  def index
+    @saved_breweries = current_user.saved_breweries
+    render 'index.json.jb'
   end
 end
