@@ -1,0 +1,15 @@
+{
+  
+  brewery_id: @brewery["brewery_id"],
+  brewer_name: @brewery["brewer_name"],
+  brewery_label: @brewery["brewery_label"],
+  twitter: @brewery["contact"]["twitter"],
+  facebook: @brewery["contact"]["facebook"],
+  instagram: @brewery["contact"]["instagram"],
+  website: @brewery["contact"]["url"],
+  brewery_id: @brewery["brewery_id"],
+  rating_count: @brewery["rating"]["count"],
+  rating_score: @brewery["rating"]["rating_score"],
+  brewery_description: @brewery["rating"]["rating_score"],
+  brewery: @brewery
+}
