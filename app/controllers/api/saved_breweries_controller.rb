@@ -13,6 +13,10 @@ class Api::SavedBreweriesController < ApplicationController
     render 'show.json.jb'
   end
 
+  def update
+    render 'show.json.jb'
+  end
+
   def index
     @saved_breweries = current_user.saved_breweries
     render 'index.json.jb'
