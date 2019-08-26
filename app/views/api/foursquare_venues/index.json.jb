@@ -1,6 +1,7 @@
 @foursquare_breweries.map do |brewery|
   {
     venue_id: brewery["venue"]["id"],
+    untappd_id: brewery["venue"]["untappd_id"],
     distance: brewery["venue"]["location"]["distance"],
     venue_name: brewery["venue"]["name"],
     venue_address: brewery["venue"]["location"]["address"],
