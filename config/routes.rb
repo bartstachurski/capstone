@@ -15,6 +15,8 @@ Rails.application.routes.draw do
     get '/brewery_db_searches/:id' => 'brewery_db_searches#show'
     get '/untappd_venues' => 'untappd_venues#index'
     get '/untappd_venues/:id' => 'untappd_venues#show'
+    get '/foursquare_venues' => 'foursquare_venues#index'
+    get '/foursquare_venues/:id' => 'foursquare_venues#show'
     get '/untappd_breweries/:id' => 'untappd_breweries#show'
   end
 end

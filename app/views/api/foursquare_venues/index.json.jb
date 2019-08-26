@@ -1,0 +1,15 @@
+@foursquare_breweries.map do |brewery|
+  {
+    venue_id: brewery["venue"]["id"],
+    distance: brewery["venue"]["location"]["distance"],
+    venue_name: brewery["venue"]["name"],
+    venue_address: brewery["venue"]["location"]["address"],
+    venue_city: brewery["venue"]["location"]["city"],
+    venue_state: brewery["venue"]["location"]["state"],
+    venue_country: brewery["venue"]["location"]["country"],
+    zip_code: brewery["venue"]["location"]["postalCode"],
+    lat: brewery["venue"]["location"]["lat"],
+    lng: brewery["venue"]["location"]["lng"],
+    # categories: brewery["categories"]
+  }
+end
