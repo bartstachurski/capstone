@@ -20,6 +20,8 @@ class Api::FoursquareVenuesController < ApplicationController
   def show
     foursquare_venue_info = HTTP.get("https://api.foursquare.com/v2/venues/4fc99910bb3d84c733701efb?client_id=#{ENV["FOURSQUARE_CLIENT_ID"]}&client_secret=#{ENV["FOURSQUARE_CLIENT_SECRET"]}&v=20180323")
     @foursquare_venue_info = foursquare_venue_info.parse["response"]["venue"]
+    foursquare_venue_tips = HTTP.get("https://api.foursquare.com/v2/venues/4fc99910bb3d84c733701efb/tips?client_id=#{ENV["FOURSQUARE_CLIENT_ID"]}&client_secret=#{ENV["FOURSQUARE_CLIENT_SECRET"]}&v=20180323")
+    @foursquare_venue_tips = foursquare_venue_tips.parse["response"]["tips"]["items"]
     render 'show.json.jb'
   end
 

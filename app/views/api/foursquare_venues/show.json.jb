@@ -12,7 +12,7 @@
   rating_signals: @foursquare_venue_info["ratingSignals"],
   menu: @foursquare_venue_info["menu"],
   photos: @foursquare_venue_info["photos"],
-  tips: @foursquare_venue_info["tips"],
+  tips: @foursquare_venue_tips,
   listed: @foursquare_venue_info["listed"],
   phrases: @foursquare_venue_info["phrases"],
   hours: @foursquare_venue_info["hours"],
