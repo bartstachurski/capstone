@@ -1,5 +1,4 @@
 {
-  
   brewery_id: @brewery["brewery_id"],
   brewer_name: @brewery["brewer_name"],
   brewery_label: @brewery["brewery_label"],
