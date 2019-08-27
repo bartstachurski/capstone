@@ -8,5 +8,6 @@
   venue_city: @untappd_venue_info["location"]["venue_city"],
   venue_state: @untappd_venue_info["location"]["venue_state"],
   venue_country: @untappd_venue_info["location"]["venue_country"],
+  foursquare_id: @untappd_venue_info["foursquare"]["foursquare_id"],
   venue_info: @untappd_venue_info
 }

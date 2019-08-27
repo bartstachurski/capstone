@@ -22,4 +22,5 @@ class Api::FoursquareVenuesController < ApplicationController
     @foursquare_venue_info = foursquare_venue_info.parse["response"]["venue"]
     render 'show.json.jb'
   end
+
 end
