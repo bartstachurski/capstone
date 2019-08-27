@@ -9,6 +9,7 @@
   brewery_id: @brewery["brewery_id"],
   rating_count: @brewery["rating"]["count"],
   rating_score: @brewery["rating"]["rating_score"],
-  brewery_description: @brewery["rating"]["rating_score"],
+  brewery_description: @brewery["brewery_description"],
+  beer_list: @brewery["beer_list"]["items"],
   brewery: @brewery
 }

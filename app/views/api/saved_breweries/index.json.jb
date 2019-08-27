@@ -5,6 +5,8 @@
     visited: saved_brewery["visited"],
     rating: saved_brewery["rating"],
     comment: saved_brewery["comment"],
-    brewery_id: saved_brewery["brewery_id"],
+    untappd_brewery_id: saved_brewery["untappd_brewery_id"],
+    untappd_venue_id: saved_brewery["untappd_venue_id"],
+    foursquare_venue_id: saved_brewery["foursquare_venue_id"]
   }
 end
