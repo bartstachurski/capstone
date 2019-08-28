@@ -11,5 +11,6 @@
   rating_score: @brewery["rating"]["rating_score"],
   brewery_description: @brewery["brewery_description"],
   beer_list: @brewery["beer_list"]["items"],
+  checkins: @brewery["checkins"]["items"],
   brewery: @brewery
 }
