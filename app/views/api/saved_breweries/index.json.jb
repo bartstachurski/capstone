@@ -7,6 +7,7 @@
     comment: saved_brewery["comment"],
     untappd_brewery_id: saved_brewery["untappd_brewery_id"],
     untappd_venue_id: saved_brewery["untappd_venue_id"],
+    brewery_label: saved_brewery["brewery_label"],
     foursquare_venue_id: saved_brewery["foursquare_venue_id"]
   }
 end

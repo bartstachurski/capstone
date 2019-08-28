@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_27_175612) do
+ActiveRecord::Schema.define(version: 2019_08_28_031420) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -51,7 +51,7 @@ ActiveRecord::Schema.define(version: 2019_08_27_175612) do
     t.integer "user_id"
     t.string "untappd_venue_id"
     t.boolean "visited"
-    t.integer "rating"
+    t.float "rating"
     t.text "comment"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -59,6 +59,7 @@ ActiveRecord::Schema.define(version: 2019_08_27_175612) do
     t.string "venue_name"
     t.string "foursquare_venue_id"
     t.string "untappd_brewery_id"
+    t.string "brewery_label"
   end
 
   create_table "saved_brewery_groups", force: :cascade do |t|

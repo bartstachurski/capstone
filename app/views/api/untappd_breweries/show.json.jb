@@ -6,7 +6,6 @@
   facebook: @brewery["contact"]["facebook"],
   instagram: @brewery["contact"]["instagram"],
   website: @brewery["contact"]["url"],
-  brewery_id: @brewery["brewery_id"],
   rating_count: @brewery["rating"]["count"],
   rating_score: @brewery["rating"]["rating_score"],
   brewery_description: @brewery["brewery_description"],
