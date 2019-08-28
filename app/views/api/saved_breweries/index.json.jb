@@ -8,6 +8,9 @@
     untappd_brewery_id: saved_brewery["untappd_brewery_id"],
     untappd_venue_id: saved_brewery["untappd_venue_id"],
     brewery_label: saved_brewery["brewery_label"],
+    created_at_date: saved_brewery["created_at"].strftime("%b %d, %Y"),
+    created_at_time: saved_brewery["created_at"].strftime("%I:%M %p"),
+    updated_at: saved_brewery["updated_at"],
     foursquare_venue_id: saved_brewery["foursquare_venue_id"]
   }
 end
