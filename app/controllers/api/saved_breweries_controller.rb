@@ -9,6 +9,7 @@ class Api::SavedBreweriesController < ApplicationController
       brewery_name: params[:brewery_name],
       venue_name: params[:venue_name],
       foursquare_venue_id: params[:foursquare_venue_id],
+      brewery_label: params[:brewery_label],
       untappd_venue_id: params[:untappd_venue_id]
       )
     saved_brewery.save
