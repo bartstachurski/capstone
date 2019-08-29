@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     post '/sessions' => 'sessions#create'
     post '/friendships' => 'friendships#create'
     get '/saved_breweries' => 'saved_breweries#index'
+    patch '/saved_breweries/:id' => 'saved_breweries#update'
     post '/saved_breweries' => 'saved_breweries#create'
     get '/saved_breweries' => 'saved_breweries#index'
     get '/brewery_db_searches' => 'brewery_db_searches#index'

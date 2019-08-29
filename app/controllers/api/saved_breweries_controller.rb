@@ -17,6 +17,11 @@ class Api::SavedBreweriesController < ApplicationController
   end
 
   def update
+    @saved_brewery = SavedBrewery.find_by(id: params[:id])
+    @saved_brewery.visited = params[:visited] || @saved_brewery.visited
+    @saved_brewery.rating = params[:saved_rating] || @saved_brewery.rating
+    @saved_brewery.save
+
     render 'show.json.jb'
   end
 
