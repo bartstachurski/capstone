@@ -12,12 +12,6 @@ class User < ApplicationRecord
   has_secure_password
   validates :email, presence: true, uniqueness: true
 
-  
-  # remove this once front end authentication complete
-  def current_user
-    User.first
-  end
-
   def remove_friend(friend)
     current_user.friends.destroy(friend)
   end

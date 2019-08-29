@@ -25,6 +25,12 @@ class Api::SavedBreweriesController < ApplicationController
     render 'show.json.jb'
   end
 
+  def destroy
+    @saved_brewery = SavedBrewery.find_by(id: params[:id])
+    @saved_brewery.destroy
+    render 'destroy.json.jb'
+  end
+
   def index
     @saved_breweries = current_user.saved_breweries
     render 'index.json.jb'

@@ -14,4 +14,9 @@ class Api::UsersController < ApplicationController
       render json: {errors: user.errors.full_messages}, status: :bad_request
     end
   end
+
+  def index
+    @users = User.where("name LIKE ?", "%Tony%")
+    render "index.json.jb"
+  end
 end
