@@ -1,0 +1,4 @@
+{
+  message: "Friend Request destroyed",
+  friend_request: @friend_request
+}

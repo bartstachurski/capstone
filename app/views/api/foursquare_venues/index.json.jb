@@ -10,7 +10,8 @@
     venue_country: brewery["venue"]["location"]["country"],
     zip_code: brewery["venue"]["location"]["postalCode"],
     lat: brewery["venue"]["location"]["lat"],
-    lng: brewery["venue"]["location"]["lng"]
+    lng: brewery["venue"]["location"]["lng"],
+    position: {lat: brewery["venue"]["location"]["lat"], lng: brewery["venue"]["location"]["lng"]}
     # categories: brewery["categories"]
   }
 end
