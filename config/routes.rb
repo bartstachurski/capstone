@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     get '/users' => 'users#index'
     post '/sessions' => 'sessions#create'
     post '/friendships' => 'friendships#create'
+    get '/friendships' => 'friendships#index'
     get '/saved_breweries' => 'saved_breweries#index'
     patch '/saved_breweries/:id' => 'saved_breweries#update'
     delete '/saved_breweries/:id' => 'saved_breweries#destroy'

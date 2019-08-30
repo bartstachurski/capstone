@@ -1,0 +1,9 @@
+@friends.map do |friend|
+  {
+    created_at_date: friend.created_at.strftime("%b %d, %Y"),
+    created_at_time: friend.created_at.strftime("%I:%M %p"),
+    email: friend.email,
+    name: friend.name,
+    id: friend.id,
+  }
+end

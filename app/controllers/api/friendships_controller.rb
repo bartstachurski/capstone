@@ -8,4 +8,9 @@ class Api::FriendshipsController < ApplicationController
     @new_friend.save
     render 'create.json.jb'
   end
+
+  def index
+    @friends = current_user.friends
+    render 'index.json.jb'
+  end
 end

@@ -16,7 +16,7 @@ class Api::UsersController < ApplicationController
   end
 
   def index
-    @users = User.where("name LIKE ?", "%Tony%")
+    @users = User.where("name LIKE ?", "%#{params[:name]}%")
     render "index.json.jb"
   end
 end
