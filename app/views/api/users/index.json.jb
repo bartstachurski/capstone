@@ -1,1 +1,11 @@
-{message: @users}
+@users.map do |user|
+  {
+   bio: user.bio,
+   created_at: user.created_at,
+   email: user.email,
+   first_name: user.first_name,
+   id: user.id,
+   last_name: user.last_name,
+   profile_photo: user.profile_photo
+  }
+end

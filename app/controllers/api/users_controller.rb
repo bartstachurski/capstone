@@ -16,7 +16,11 @@ class Api::UsersController < ApplicationController
   end
 
   def index
-    @users = User.where("name LIKE ?", "%#{params[:name]}%")
+    if params[:name]
+      @users = User.where("name LIKE ?", "%#{params[:name]}%")
+    else
+      @users = User.all
+    end
     render "index.json.jb"
   end
 end

@@ -25,7 +25,10 @@ class Api::FriendRequestsController < ApplicationController
         user_details: request.user,
         friend_details: request.friend,
         user_id: request.user_id,
-        friend_id: request.friend_id
+        friend_id: request.friend_id,
+        created_at_date: request.created_at.strftime("%b %d, %Y"),
+        created_at_time: request.created_at.strftime("%I:%M %p"),
+        id: request.id
       }
     end
     @outgoing = current_user.friend_requests
@@ -35,7 +38,10 @@ class Api::FriendRequestsController < ApplicationController
         user_details: request.user,
         friend_details: request.friend,
         user_id: request.user_id,
-        friend_id: request.friend_id
+        friend_id: request.friend_id,
+        created_at_date: request.created_at.strftime("%b %d, %Y"),
+        created_at_time: request.created_at.strftime("%I:%M %p"),
+        id: request.id
       }
     end
     render 'index.json.jb'
