@@ -6,12 +6,14 @@ class Api::GroupsController < ApplicationController
   end
 
   def show
-    @group = Group.find_by(id: 2)
-    @breweries = @group.saved_breweries
+    @group = Group.find_by(id: params[:id])
+    # @breweries = @group.saved_breweries
     render 'show.json.jb'
   end
 
   def create
+    @group = Group.new(name: params[:name])
+    @group.save
     render 'show.json.jb'
   end
 
