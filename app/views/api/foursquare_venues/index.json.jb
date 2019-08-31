@@ -12,9 +12,11 @@
     lat: brewery["venue"]["location"]["lat"],
     lng: brewery["venue"]["location"]["lng"],
     position: {
-      lat: brewery["venue"]["location"]["lat"], 
-      lng: brewery["venue"]["location"]["lng"],
-      untappd_venue_id: brewery["venue"]["untappd_venue_id"]
+      position: {
+        lat: brewery["venue"]["location"]["lat"], 
+        lng: brewery["venue"]["location"]["lng"],
+        untappd_venue_id: brewery["venue"]["untappd_venue_id"]
+      }
     }
     # categories: brewery["categories"]
   }
