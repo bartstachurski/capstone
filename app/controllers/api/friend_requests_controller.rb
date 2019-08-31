@@ -16,6 +16,7 @@ class Api::FriendRequestsController < ApplicationController
   def index
     @incoming = FriendRequest.where(friend: current_user)
     @outgoing = current_user.friend_requests
+    render 'index.json.jb'
   end
 
   def update

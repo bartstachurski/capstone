@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     get '/users' => 'users#index'
     post '/sessions' => 'sessions#create'
     post '/friend_requests' => 'friend_requests#create'
+    get '/friend_requests' => 'friend_requests#index'
     delete '/friend_requests/:id' => 'friend_requests#destroy'
     patch '/friend_requests/:id' => 'friend_requests#update'
     post '/friendships' => 'friendships#create'
