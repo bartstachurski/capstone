@@ -16,7 +16,8 @@
         lat: brewery["venue"]["location"]["lat"], 
         lng: brewery["venue"]["location"]["lng"],
         untappd_venue_id: brewery["venue"]["untappd_venue_id"]
-      }
+      },
+      infoText: brewery["venue"]["name"]
     }
     # categories: brewery["categories"]
   }

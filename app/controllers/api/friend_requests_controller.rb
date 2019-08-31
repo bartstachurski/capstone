@@ -15,7 +15,29 @@ class Api::FriendRequestsController < ApplicationController
 
   def index
     @incoming = FriendRequest.where(friend: current_user)
+    # @incoming.each do |friend_request|
+    #   friend_request["friend_details"] = friend_request.friend
+    #   friend_request["user_details"] = friend_request.user
+    # end
+    @incoming = @incoming.map do |request|
+      {
+        category: "incoming",
+        user_details: request.user,
+        friend_details: request.friend,
+        user_id: request.user_id,
+        friend_id: request.friend_id
+      }
+    end
     @outgoing = current_user.friend_requests
+    @outgoing = @outgoing.map do |request|
+      {
+        category: "outgoing",
+        user_details: request.user,
+        friend_details: request.friend,
+        user_id: request.user_id,
+        friend_id: request.friend_id
+      }
+    end
     render 'index.json.jb'
   end
 

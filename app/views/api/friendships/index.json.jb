@@ -3,7 +3,11 @@
     created_at_date: friend.created_at.strftime("%b %d, %Y"),
     created_at_time: friend.created_at.strftime("%I:%M %p"),
     email: friend.email,
-    name: friend.name,
+    first_name: friend.first_name,
+    last_name: friend.last_name,
+    bio: friend.bio,
+    profile_photo: friend.profile_photo,
+    bio: friend.bio,
     id: friend.id,
   }
 end
