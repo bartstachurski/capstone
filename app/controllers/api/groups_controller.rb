@@ -13,7 +13,7 @@ class Api::GroupsController < ApplicationController
   end
 
   def create
-    @group = Group.new(name: params[:name])
+    @group = Group.new(name: params[:name], user_id: current_user.id)
     @group.save
     render 'show.json.jb'
   end

@@ -3,23 +3,23 @@ class ApplicationController < ActionController::Base
 
   def current_user
     # Uncomment this next line to hack current user to not deal with authentication:
-    User.find_by(id: 6)
-    # User.last
-    # auth_headers = request.headers['Authorization']
-    # if auth_headers.present? && auth_headers[/(?<=\A(Bearer ))\S+\z/]
-    #   token = auth_headers[/(?<=\A(Bearer ))\S+\z/]
-    #   begin
-    #     decoded_token = JWT.decode(
-    #       token,
-    #       Rails.application.credentials.fetch(:secret_key_base),
-    #       true,
-    #       { algorithm: 'HS256' }
-    #     )
-    #     User.find_by(id: decoded_token[0]["user_id"])
-    #   rescue JWT::ExpiredSignature
-    #     nil
-    #   end
-    # end
+    # User.find_by(id: 5)
+    User.last
+    auth_headers = request.headers['Authorization']
+    if auth_headers.present? && auth_headers[/(?<=\A(Bearer ))\S+\z/]
+      token = auth_headers[/(?<=\A(Bearer ))\S+\z/]
+      begin
+        decoded_token = JWT.decode(
+          token,
+          Rails.application.credentials.fetch(:secret_key_base),
+          true,
+          { algorithm: 'HS256' }
+        )
+        User.find_by(id: decoded_token[0]["user_id"])
+      rescue JWT::ExpiredSignature
+        nil
+      end
+    end
   end
 
   helper_method :current_user

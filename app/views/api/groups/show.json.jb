@@ -1,5 +1,6 @@
 {
   group: @group,
+  users: @group.users,
   breweries: @breweries,
   saved_brewery_groups: @saved_brewery_groups
 }
