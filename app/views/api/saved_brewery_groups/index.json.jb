@@ -1,0 +1,8 @@
+@saved_brewery_groups.map do |saved_brewery_group|
+  {
+    id: saved_brewery_group["id"],
+    saved_brewery_id: saved_brewery_group["saved_brewery_id"],
+    group_id: saved_brewery_group["group_id"],
+    saved_brewery: saved_brewery_group.saved_brewery
+  }
+end

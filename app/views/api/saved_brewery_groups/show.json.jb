@@ -1,0 +1,5 @@
+{
+  group_id: @saved_brewery_group.id,
+  saved_brewery_id: @saved_brewery_group.id,
+  venue: @saved_brewery_group.saved_brewery
+}

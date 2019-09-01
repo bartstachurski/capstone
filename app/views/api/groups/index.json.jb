@@ -4,5 +4,7 @@
     id: group.id,
     user_id: group.user_id,
     created_at: group.created_at,
+    saved_breweries: group.saved_breweries,
+    saved_brewery_groups: group.saved_brewery_groups
   }
 end

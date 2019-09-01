@@ -7,7 +7,8 @@ class Api::GroupsController < ApplicationController
 
   def show
     @group = Group.find_by(id: params[:id])
-    # @breweries = @group.saved_breweries
+    @breweries = @group.saved_breweries
+    @saved_brewery_groups = @group.saved_brewery_groups
     render 'show.json.jb'
   end
 
