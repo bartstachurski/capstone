@@ -39,5 +39,6 @@ Rails.application.routes.draw do
     get '/foursquare_venues' => 'foursquare_venues#index'
     get '/foursquare_venues/:id' => 'foursquare_venues#show'
     get '/untappd_breweries/:id' => 'untappd_breweries#show'
+    post '/aws_s3_group_photos_uploads' => 'aws_s3_group_photos_uploads#create'
   end
 end

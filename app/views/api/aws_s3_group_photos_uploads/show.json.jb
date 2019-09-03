@@ -1,0 +1,4 @@
+{
+  message: "file saved to s3 successfully...well, hopefully",
+  presigned_url: @presigned_url
+}
