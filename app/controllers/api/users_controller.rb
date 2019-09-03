@@ -23,4 +23,14 @@ class Api::UsersController < ApplicationController
     end
     render "index.json.jb"
   end
+
+  def show
+    @user = User.find_by(id: params[:id])
+    if current_user.friends.include?(@user)
+      @friend_status = true
+    else
+      @friend_status = false
+    end
+    render 'show.json.jb'
+  end
 end

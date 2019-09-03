@@ -1,0 +1,6 @@
+{
+  message: "friendship successfully destroyed",
+  friendship_details: @friendship,
+  user_details: @friendship.user,
+  friend_details: @friendship.friend
+}

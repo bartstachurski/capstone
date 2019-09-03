@@ -2,10 +2,13 @@
   {
    bio: user.bio,
    created_at: user.created_at,
+   created_at_date: user.created_at.strftime("%b %d, %Y"),
+   created_at_time: user.created_at.strftime("%I:%M %p"),
    email: user.email,
    first_name: user.first_name,
    id: user.id,
    last_name: user.last_name,
-   profile_photo: user.profile_photo
+   profile_photo: user.profile_photo,
+   full_name: user.first_name + " " + user.last_name
   }
 end

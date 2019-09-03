@@ -3,8 +3,7 @@ class ApplicationController < ActionController::Base
 
   def current_user
     # Uncomment this next line to hack current user to not deal with authentication:
-    # User.find_by(id: 5)
-    User.last
+    # User.find_by(id: 6)
     auth_headers = request.headers['Authorization']
     if auth_headers.present? && auth_headers[/(?<=\A(Bearer ))\S+\z/]
       token = auth_headers[/(?<=\A(Bearer ))\S+\z/]

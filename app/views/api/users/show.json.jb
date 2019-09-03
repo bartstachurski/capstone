@@ -1,0 +1,12 @@
+{
+  user: @user,
+  id: @user.id,
+  first_name: @user.first_name,
+  last_name: @user.last_name,
+  profile_photo: @user.profile_photo,
+  saved_breweries: @user.saved_breweries,
+  email: @user.email,
+  bio: @user.bio,
+  groups: @user.groups,
+  friend_status: @friend_status
+}
