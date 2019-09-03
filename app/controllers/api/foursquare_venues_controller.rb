@@ -5,8 +5,11 @@ class Api::FoursquareVenuesController < ApplicationController
     @foursquare_breweries = foursquare_breweries.parse["response"]["groups"][0]["items"]
     @foursquare_breweries.each do |brewery|
       untappd_convert_id_response = HTTP.get("https://api.untappd.com/v4/venue/foursquare_lookup/#{brewery["venue"]["id"]}?client_id=#{ENV["UNTAPPD_CLIENT_ID"]}&client_secret=#{ENV["UNTAPPD_CLIENT_SECRET"]}")
-      untappd_venue_id = untappd_convert_id_response.parse["response"]["venue"]["items"][0]["venue_id"]
-      brewery["venue"]["untappd_venue_id"] = untappd_venue_id
+      if untappd_convert_id_response
+        untappd_venue_id = untappd_convert_id_response.parse["response"]["venue"]["items"][0]["venue_id"]
+        brewery["venue"]["untappd_venue_id"] = untappd_venue_id
+      else
+        brewery["venue"]["untappd_venue_id"] = 
     end
     # @foursquare_breweries.each do |brewery|
     # foursquare_venue_id = @foursquare_breweries[0]["venue"]["id"]
