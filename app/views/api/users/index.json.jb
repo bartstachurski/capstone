@@ -9,6 +9,6 @@
    id: user.id,
    last_name: user.last_name,
    profile_photo: user.profile_photo,
-   full_name: user.first_name + " " + user.last_name
+   full_name: "#{user.first_name} #{user.last_name}"
   }
 end

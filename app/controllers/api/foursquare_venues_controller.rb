@@ -6,6 +6,7 @@ class Api::FoursquareVenuesController < ApplicationController
     @foursquare_breweries.each do |brewery|
       untappd_convert_id_response = HTTP.get("https://api.untappd.com/v4/venue/foursquare_lookup/#{brewery["venue"]["id"]}?client_id=#{ENV["UNTAPPD_CLIENT_ID"]}&client_secret=#{ENV["UNTAPPD_CLIENT_SECRET"]}")
       if untappd_convert_id_response.parse["response"] == []
+        # this addresses a bug where if there is no returned untappd venue ID the loop breaks. defaults to AB for now...
         brewery["venue"]["untappd_venue_id"] = 44
       else
         untappd_venue_id = untappd_convert_id_response.parse["response"]["venue"]["items"][0]["venue_id"]
