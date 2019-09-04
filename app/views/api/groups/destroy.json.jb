@@ -1,0 +1,4 @@
+{
+  message: "group destroyed successfully!",
+  group_destroyed: @group
+}

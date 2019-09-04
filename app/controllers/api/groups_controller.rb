@@ -13,12 +13,14 @@ class Api::GroupsController < ApplicationController
   end
 
   def create
-    @group = Group.new(name: params[:name], user_id: current_user.id)
+    @group = Group.new(name: params[:name], user_id: current_user.id, photo_url: params[:photo_url])
     @group.save
     render 'show.json.jb'
   end
 
   def destroy
+    @group = Group.find_by(id: params[:id])
+    @group.destroy
     render 'destroy.json.jb'
   end
 
