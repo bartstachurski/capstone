@@ -2,7 +2,7 @@ class Api::UsersController < ApplicationController
 
   def create
     if params[:profile_photo].length > 0
-      profile_photo = params[profile_photo]
+      profile_photo = params[:profile_photo]
     else
       profile_photo = "https://i7.pngguru.com/preview/972/909/268/computer-icons-smiley-emoticon-youtube-wink-smiley-face.jpg"
     end
@@ -14,7 +14,7 @@ class Api::UsersController < ApplicationController
       email: params[:email],
       password: params[:password],
       password_confirmation: params[:password_confirmation],
-      profile_photo: profile_photo
+      profile_photo: params[:profile_photo]
     )
 
     if user.save
